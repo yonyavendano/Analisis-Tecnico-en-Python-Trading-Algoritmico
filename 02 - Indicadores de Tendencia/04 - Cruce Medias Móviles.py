@@ -88,10 +88,10 @@ axes.fill_between(
     
 # Añadir triángulos solo en los cruces de las líneas
 for i in range(1, filas):
-    if mac["Cruce"].iloc[-i] == 1 and mac["Cruce"].iloc[-(i-1)] == -1:
+    if mac["Cruce"].iloc[-i] == 1 and mac["Cruce"].iloc[-i-1] == -1:
         axes.scatter(mac.index[-i], mac["SMA_Rapida"].iloc[-i], marker="^", color="green", s=120, edgecolor="black",
                      linewidth=1.5)
-    elif mac["Cruce"].iloc[-i] == -1 and mac["Cruce"].iloc[-(i-1)] == 1:
+    elif mac["Cruce"].iloc[-i] == -1 and mac["Cruce"].iloc[-i-1] == 1:
         axes.scatter(mac.index[-i], mac["SMA_Rapida"].iloc[-i], marker="v", color="red", s=120, edgecolor="black",
                      linewidth=1.5)
         
