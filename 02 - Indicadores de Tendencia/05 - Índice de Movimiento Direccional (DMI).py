@@ -76,7 +76,7 @@ def Indice_Movimiento_Direccional(df: pd.DataFrame, suavizado_ADX: int = 14, lon
     return ADX.merge(ADXI, how="outer", left_index=True, right_index=True)
 
 # Obtener Datos
-df = yf.download("SQ", start="2020-01-01", end="2024-01-01", interval="1d")
+df = yf.download("SQ", start="2025-01-01", end="2025-07-01", interval="1d", multi_level_index=False)
 
 # Calcular Indicador
 dmi = Indice_Movimiento_Direccional(df, suavizado_ADX=14, longitud_DI=14)
