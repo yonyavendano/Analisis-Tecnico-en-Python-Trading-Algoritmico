@@ -7,6 +7,36 @@ import matplotlib.pyplot as plt
 
 # Indicador: Media Móvil Simple (SMA)
 def Media_Movil_Simple(df: pd.DataFrame, longitud: int = 21, columna: str = "Close") -> pd.Series:
+
+#  """
+#    La Media Móvil Simple (SMA o MA) se utiliza comúnmente para identificar la dirección de la tendencia de una acción o para 
+#   determinar sus niveles de soporte y resistencia. Es un indicador de seguimiento de tendencia -o rezagado- porque se basa en 
+#    precios pasados.
+#   
+#   Cuanto más largo es el periodo de la media móvil, mayor es el rezago. Así que una SMA de 200 días tendrá un mayor grado de 
+#   rezago que una SMA de 20 días porque contiene precios de los últimos 200 días.
+   
+#   Cómo Operarlo:
+        
+#        Dado que la SMA se utiliza como niveles de Soporte y Resistencia, la operación básica es comprar cerca del soporte en
+#        tendencias alcistas y vender cerca de las resistencias en tendencias bajistas.
+        
+#       Operar con solo una SMA puede llevar a malas interpretaciones, y puede ser peligroso. Por eso, operar con SMAs requerirá
+#        una media móvil rápida y una lenta. Si la MA rápida cruza de abajo hacia arriba a la MA lenta, esto indica una oportunidad
+#        de compra. Si la MA rápida cruza de arriba hacia abajo a la MA lenta, esto indica una oportunidad de venta.
+        
+#    ----------
+#    Parámetros
+#    ----------
+#    param : pd.DataFrame : df : Datos Históricos.
+#    ----------
+#    param : int : longitud : Ventana a utilizar en el cálculo de la SMA (por defecto, se establece en 21).
+#    ----------
+#    param : str : columna : Columna a utilizar en el cálculo de la SMA (por defecto, se establece en 'Close').
+#    ----------
+#    Salida:
+#    ----------
+#    """
     
     """
     La Media Móvil Simple (SMA o MA) se utiliza comúnmente para identificar la dirección de la tendencia de una acción o para 
