@@ -41,7 +41,7 @@ def Media_Movil_Exponencial(df: pd.DataFrame, longitud: int = 26, columna: str =
     return EMA
 
 # Descargar los datos
-df = yf.download("MSFT", start="2023-01-01", end="2024-01-01", interval="1d")
+df = yf.download("GOOGL", start="2025-01-01", end="2025-07-01", interval="1d", multi_level_index=False)
 
 # Calcular Indicador
 ema_12 = Media_Movil_Exponencial(df, longitud=12, columna="Close")
