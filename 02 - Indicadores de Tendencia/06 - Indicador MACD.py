@@ -50,7 +50,7 @@ def MACD(df: pd.DataFrame, longitud_rapida: int = 12, longitud_lenta: int = 26, 
     return MACD
 
 # Obtener Datos Históricos
-df = yf.download("NVDA", start="2020-01-01", end="2024-01-01", interval="1d")
+df = yf.download("SQ", start="2025-01-01", end="2025-07-01", interval="1d", multi_level_index=False)
 
 # Calcular Indicador
 macd = MACD(df, longitud_rapida=12, longitud_lenta=26, longitud_señal=9)
